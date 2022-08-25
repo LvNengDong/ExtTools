@@ -46,13 +46,11 @@ public class StringEscapeUtilsTest {
      * 消除转义字符
      */
     @Test
-    public void Demo() {
-        String inputString = "{\n" +
-                "  \"name\": \"Jack\",\n" +
-                "  \"age\": 18,\n" +
-                "  \"gender\": \"男\"\n" +
-                "}";
+    public void Demo() throws IOException {
+        String inputString = Files.asCharSource(new File("src/main/resources/b.txt"), StandardCharsets.UTF_8).read();
+        inputString = StringEscapeUtils.escapeJson(inputString);
         System.out.println(inputString);
+
         String outputString = StringEscapeUtils.unescapeJson(inputString);
         System.out.println(outputString);
     }
