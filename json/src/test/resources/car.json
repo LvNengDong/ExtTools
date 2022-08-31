@@ -1,0 +1,10 @@
+[
+  {
+    "brand" : "Mercedes",
+    "doors" : 5
+  },
+  {
+    "brand" : "Fiat",
+    "doors" : 3
+  }
+]
